@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -237,6 +238,10 @@
       <workItem from="1591606252087" duration="645000" />
       <workItem from="1591618018245" duration="89000" />
       <workItem from="1591618271281" duration="616000" />
+      <workItem from="1592992426084" duration="3481000" />
+      <workItem from="1593186555536" duration="11000" />
+      <workItem from="1593186579069" duration="565000" />
+      <workItem from="1593187186396" duration="365000" />
     </task>
     <servers />
   </component>
