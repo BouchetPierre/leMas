@@ -44,7 +44,7 @@ class AnnonceController extends AbstractController
             );
 
             return $this->redirectToRoute("annonces_show", [
-               'slug' => $annonce->getSlug()
+               'id' => $annonce->getId()
             ]);
         }
 

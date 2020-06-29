@@ -32,7 +32,7 @@ class UserRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('u')
             ->where('u.name = :name')
-            ->setParameter('name', 'LeMas')
+            ->setParameter('name', 'ASL')
             ->getQuery()
             ->getOneOrNullResult();
     }

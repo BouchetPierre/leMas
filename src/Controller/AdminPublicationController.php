@@ -78,6 +78,8 @@ class AdminPublicationController extends AbstractController
         $publications = $repo->findAll2();
         $idAuthor = $user->idAdmin();
 
+
+
         return $this->render('publications/index.html.twig', [
             'publications' => $publications,
             'idLeMas' => $idAuthor

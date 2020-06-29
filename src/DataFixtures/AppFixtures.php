@@ -32,11 +32,11 @@ class AppFixtures extends Fixture
         $manager->persist($adminRole);
 
         $adminUser = new User();
-        $adminUser->setName('Bouchet')
-            ->setLastname('Pierre')
-            ->setAddress('99 Rue Edmond Halley')
-            ->setEmail('pf.bouchet@orange.fr')
-            ->setHash($this->encoder->encodePassword($adminUser, 'password'))
+        $adminUser->setName('ASL')
+            ->setLastname('LE MAS')
+            ->setAddress('LE MAS')
+            ->setEmail('asl.lemas34@gmail.com')
+            ->setHash($this->encoder->encodePassword($adminUser, 'adminlemas'))
             ->addUserRole($adminRole);
         $manager->persist($adminUser);
 

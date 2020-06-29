@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPublicationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ResettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResettingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +246,10 @@
       <workItem from="1592992426084" duration="3481000" />
       <workItem from="1593186555536" duration="11000" />
       <workItem from="1593186579069" duration="565000" />
-      <workItem from="1593187186396" duration="365000" />
+      <workItem from="1593187186396" duration="691000" />
+      <workItem from="1593351344095" duration="20000" />
+      <workItem from="1593355031688" duration="4673000" />
+      <workItem from="1593421610483" duration="415000" />
     </task>
     <servers />
   </component>
