@@ -57,7 +57,8 @@ class ResettingController extends AbstractController
         $bodyMail = $mailer->createBodyMail('resetting/mail.html.twig', [
         'user' => $user
         ]);
-        $mailer->sendMessage('asl.lemas@gmail.com', $user->getEmail(), 'renouvellement du mot de passe', $bodyMail);
+        $mailer->sendMessage('asl.lemas34@gmail.com', $user->getEmail(), 'renouvellement du mot de passe', $bodyMail);
+
         $request->getSession()->getFlashBag()->add('success', "Un mail va vous être envoyé afin que vous puissiez renouveller votre mot de passe. Le lien que vous recevrez sera valide 24h.");
 
         return $this->redirectToRoute("account_login");

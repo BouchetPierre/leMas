@@ -24,7 +24,7 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        $faker =Factory::create('FR-fr');
+        $faker = Factory::create('FR-fr');
 
         $adminRole = new Role();
 
@@ -39,52 +39,53 @@ class AppFixtures extends Fixture
             ->setHash($this->encoder->encodePassword($adminUser, 'adminlemas'))
             ->addUserRole($adminRole);
         $manager->persist($adminUser);
+    }
 
 // Users
-        $users = [];
-        $genres = ['male', 'female'];
-
-        for($i=1; $i<=5; $i++) {
-            $user = new User();
-
-            $hash = $this->encoder->encodePassword($user, 'password');
-
-            $user->setName($faker->lastName)
-                ->setLastname($faker->firstName)
-                ->setAddress($faker->address)
-                ->setEmail($faker->email)
-                ->setHash($hash)
-
-                ;
-
-            $manager->persist($user);
-            $users [] = $user;
-        }
-
-// Annonces
-        for($i=1; $i <=20; $i++) {
-            $annonce = new Annonce;
-            $choixType= ['Bricolage', 'Jardinage','Sortie','Fête', 'Collectif'];
-            $type = $choixType[rand(0,4)];
-            $title = $faker->sentence();
-            $introduction = $faker->paragraph(2);
-            $content = '<p>'.join("</p><p>",$faker->paragraphs(5)).'</p>';
-
-            $user =$users[mt_rand(0, count($users)-1)];
-
-            $annonce->setTitle($title)
-                    ->setType($type)
-                    ->setIntroduction($introduction)
-                    ->setContent($content)
-                    ->setAuthor($user)
-            ;
-
-
-
-
-            $manager->persist($annonce);
-        }
-
-        $manager->flush();
-    }
+//        $users = [];
+//        $genres = ['male', 'female'];
+//
+//        for($i=1; $i<=5; $i++) {
+//            $user = new User();
+//
+//            $hash = $this->encoder->encodePassword($user, 'password');
+//
+//            $user->setName($faker->lastName)
+//                ->setLastname($faker->firstName)
+//                ->setAddress($faker->address)
+//                ->setEmail($faker->email)
+//                ->setHash($hash)
+//
+//                ;
+//
+//            $manager->persist($user);
+//            $users [] = $user;
+//        }
+//
+//// Annonces
+//        for($i=1; $i <=20; $i++) {
+//            $annonce = new Annonce;
+//            $choixType= ['Bricolage', 'Jardinage','Sortie','Fête', 'Collectif'];
+//            $type = $choixType[rand(0,4)];
+//            $title = $faker->sentence();
+//            $introduction = $faker->paragraph(2);
+//            $content = '<p>'.join("</p><p>",$faker->paragraphs(5)).'</p>';
+//
+//            $user =$users[mt_rand(0, count($users)-1)];
+//
+//            $annonce->setTitle($title)
+//                    ->setType($type)
+//                    ->setIntroduction($introduction)
+//                    ->setContent($content)
+//                    ->setAuthor($user)
+//            ;
+//
+//
+//
+//
+//            $manager->persist($annonce);
+//        }
+//
+//        $manager->flush();
+//    }
 }

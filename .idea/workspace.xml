@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c77041d-d39a-46cf-a08c-d5505f69d950" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminPublicationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminPublicationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AnnonceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AnnonceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/dev/swiftmailer.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ResettingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ResettingController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/user.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/user.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,7 +159,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lyceeCarquefou" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
   <component name="RecentsManager">
@@ -249,7 +247,19 @@
       <workItem from="1593187186396" duration="691000" />
       <workItem from="1593351344095" duration="20000" />
       <workItem from="1593355031688" duration="4673000" />
-      <workItem from="1593421610483" duration="415000" />
+      <workItem from="1593421610483" duration="3294000" />
+      <workItem from="1593425284968" duration="650000" />
+      <workItem from="1593431926889" duration="18000" />
+      <workItem from="1593435447396" duration="3162000" />
+      <workItem from="1595225528218" duration="744000" />
+      <workItem from="1595231378048" duration="1234000" />
+      <workItem from="1595319357972" duration="946000" />
+      <workItem from="1595327882271" duration="1462000" />
+      <workItem from="1595487919339" duration="288000" />
+      <workItem from="1595505591523" duration="143000" />
+      <workItem from="1595756912811" duration="5160000" />
+      <workItem from="1595764969432" duration="3513000" />
+      <workItem from="1595768494419" duration="2859000" />
     </task>
     <servers />
   </component>
@@ -257,58 +267,17 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584353802288">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2508" y="214" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353802288" />
-    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584528909814">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1595758008077">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="2566" y="343" width="583" height="390" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584106267120" />
-    <state x="690" y="361" width="573" height="381" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.1053@67.27.1853.1053" timestamp="1584528909814" />
-    <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583224853341">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1987" y="27" width="825" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583224853341" />
-    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583849645276">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="872" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.3840.1053@0.27.3840.1053" timestamp="1583145959597" />
-    <state x="2356" y="296" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583849645276" />
-    <state x="488" y="316" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1583595406876" />
-    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1584353796211">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="254" height="195" key="DatabaseViewActions_Filter/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584353796211" />
-    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1591593898783">
+    <state x="726" y="310" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1595758008077" />
+    <state x="753" y="316" width="374" height="497" key="FileChooserDialogImpl" timestamp="1595768833182">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="1041" y="316" key="FileChooserDialogImpl/0.27.3840.1053@0.27.3840.1053" timestamp="1583135859898" />
-    <state x="2441" y="296" width="374" height="497" key="FileChooserDialogImpl/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583486829827" />
-    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1591593898783" />
-    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1583312292616">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state width="263" height="500" key="HiddenNamespacesPopup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583312292616" />
-    <state x="2274" y="249" width="718" height="676" key="RollbackChangesDialog" timestamp="1584347598520">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2274" y="249" width="718" height="676" key="RollbackChangesDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584347598520" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog" timestamp="1586417648591">
-      <screen x="67" y="27" width="1853" height="1053" />
-    </state>
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1584113046348" />
-    <state x="563" y="407" key="com.intellij.ide.util.TipDialog/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584344500416" />
-    <state x="2483" y="390" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1584430618583" />
-    <state x="649" y="368" key="com.intellij.ide.util.TipDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1586417648591" />
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1583852054948">
-      <screen x="1920" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2567" y="149" width="683" height="806" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1583852054948" />
+    <state x="753" y="316" width="424" height="484" key="FileChooserDialogImpl/67.27.1853.1053@67.27.1853.1053" timestamp="1595768833182" />
     <state x="158" y="288" width="1555" height="630" key="find.popup" timestamp="1590579445595">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="2014" y="268" width="1611" height="646" key="find.popup/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1584347558941" />
     <state x="158" y="288" width="1555" height="630" key="find.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1590579445595" />
   </component>
 </project>

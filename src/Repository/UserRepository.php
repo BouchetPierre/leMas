@@ -37,6 +37,14 @@ class UserRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+    public function allMailUsers()
+    {
+        return $this->createQueryBuilder('u')
+            ->Select('u.email')
+            ->getQuery()
+            ->getResult();
+    }
+
 
     // /**
     //  * @return User[] Returns an array of User objects
