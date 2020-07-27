@@ -9,6 +9,8 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
@@ -22,7 +24,7 @@ class RepondController extends AbstractController
      *
      * @return Response
      */
-    public function create(User $user, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
+    public function create(User $user, Request $request, EntityManagerInterface $manager, MailerInterface $mailerInterface)
     {
         $reponse = new Repond();
         $destinataire = $user->getLastname();
@@ -33,8 +35,12 @@ class RepondController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $mailUser = $user->getEmail();
-            $this->notify($mailUser, $mailer);
+            $email = (new Email())
+                ->from('asl.lemas34@gmail.com')
+                ->to($user->getEmail())
+                ->subject("Vous avez reçu un message sur le site de l' ASL Le MAS !")
+                ->html("<p>Rendez vous sur votre messagerie du site de l'ASL</p>");
+            $mailerInterface->send($email);
 
             $reponse->setDestinataire($user);
             $reponse->setAuthor($this->getUser());
@@ -75,20 +81,5 @@ class RepondController extends AbstractController
         return $this->redirectToRoute('message_show');
     }
 
-    private function notify($mailUser, \Swift_Mailer $mailer) //function to send a mail to member for notify cancellation
-    {
-
-        $message = (new \Swift_Message("Vous avez reçu un message sur le site de l'ASL Le Mas !!!"))
-            ->setFrom('asl.lemas34@gmail.com')
-            ->setTo($mailUser)
-            ->setBody("Allez consulter votre messagerie sur le site due l'ASL Le Mas !!!");
-
-        try {
-            $mailer->send($message);
-        }
-        catch(\Exception $e) {
-
-        }
-    }
 }
 
