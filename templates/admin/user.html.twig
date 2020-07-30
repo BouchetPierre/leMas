@@ -27,6 +27,8 @@
                     <td class="text-center">
                         <a href="{{ path('admin_user_delete', {'id':user.id}) }}" class="btn btn-danger" onclick="return confirm(`Êtes vous sur de vouloir supprimer cet utilisateur ?`)"><i class="fas fa-trash"></i></a>
                     </td>
+                    {% else%}
+                        <td></td>
                     {% endif %}
                 </tr>
             {% endfor %}

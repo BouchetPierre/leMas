@@ -14,8 +14,8 @@ class RepondType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('subject', TextType::class, ['label'=>'Sujet'])
-            ->add('text', TextareaType::class, ['label'=>'votre message'])
+            ->add('subject', TextType::class, ['label'=>'Sujet', 'translation_domain' => false])
+            ->add('text', TextareaType::class, ['label'=>'votre message', 'translation_domain' => false])
 
         ;
     }

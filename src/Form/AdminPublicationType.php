@@ -17,11 +17,11 @@ class AdminPublicationType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('subject',  TextType::class,['label' =>'Sujet', 'required'=>true])
-            ->add('text', CKEditorType::class,  ['label' =>'Texte', 'required'=>true])
-            ->add('imageFile', FileType::class, ['label' => 'Photo (jpg, jpeg ou png file)','required'=> false])
+            ->add('subject',  TextType::class,['label' =>'Sujet', 'required'=>true, 'translation_domain' => false])
+            ->add('text', CKEditorType::class,  ['label' =>'Texte', 'required'=>true, 'translation_domain' => false])
+            ->add('imageFile', FileType::class, ['label' => 'Photo (jpg, jpeg ou png file)','required'=> false, 'translation_domain' => false])
             ->add('brochure', FileType::class, [
-                'label' => 'Brochure (PDF file)', 'mapped' => false,'required' => false,'constraints' => [
+                'label' => 'Brochure (PDF file)', 'mapped' => false,'required' => false, 'translation_domain' => false,'constraints' => [
                     new File([
                         'maxSize' => '1024k',
                         'mimeTypes' => [

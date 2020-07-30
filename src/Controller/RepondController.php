@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Repond;
 use App\Entity\User;
 use App\Form\RepondType;
+use App\Repository\MessageRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -24,7 +25,7 @@ class RepondController extends AbstractController
      *
      * @return Response
      */
-    public function create(User $user, Request $request, EntityManagerInterface $manager, MailerInterface $mailerInterface)
+    public function create(User $user, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $reponse = new Repond();
         $destinataire = $user->getLastname();
@@ -35,12 +36,8 @@ class RepondController extends AbstractController
 
         if($form->isSubmitted() && $form->isValid()){
 
-            $email = (new Email())
-                ->from('asl.lemas34@gmail.com')
-                ->to($user->getEmail())
-                ->subject("Vous avez reçu un message sur le site de l' ASL Le MAS !")
-                ->html("<p>Rendez vous sur votre messagerie du site de l'ASL</p>");
-            $mailerInterface->send($email);
+            $mailUser = $user->getEmail();
+            $this->notify($mailUser, $mailer);
 
             $reponse->setDestinataire($user);
             $reponse->setAuthor($this->getUser());
@@ -79,6 +76,22 @@ class RepondController extends AbstractController
         );
 
         return $this->redirectToRoute('message_show');
+    }
+
+    private function notify($mailUser, \Swift_Mailer $mailer) //function to send a mail to member for notify cancellation
+    {
+
+        $message = (new \Swift_Message("Vous avez reçu un message sur le site de l'ASL Le Mas!!!"))
+            ->setFrom('ancienshdo@gmail.com')
+            ->setTo($mailUser)
+            ->setBody("Allez consulter votre messagerie sur le site de l'ASL Le Mas!!!");
+
+        try {
+            $mailer->send($message);
+        }
+        catch(\Exception $e) {
+
+        }
     }
 
 }

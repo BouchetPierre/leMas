@@ -13,6 +13,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use App\Entity\Message;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
@@ -26,7 +28,7 @@ class MessageController extends AbstractController
      *
      * @return Response
      */
-    public function create(Annonce $annonce, Request $request, EntityManagerInterface $manager)
+    public function create(Annonce $annonce, Request $request, EntityManagerInterface $manager, \Swift_Mailer $mailer)
     {
         $message = new Message();
         $destinataire = $annonce->getAuthor()->getLastname();
@@ -36,6 +38,9 @@ class MessageController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+
+            $mailUser = $annonce->getAuthor()->getEmail();
+            $this->notify($mailUser, $mailer);
 
             $message->setDestinataire($annonce);
             $message->setAuthor($this->getUser());
@@ -99,5 +104,21 @@ class MessageController extends AbstractController
         );
 
         return $this->redirectToRoute('message_show');
+    }
+
+    private function notify($mailUser, \Swift_Mailer $mailer) //function to send a mail to member for notify cancellation
+    {
+
+        $message = (new \Swift_Message("Vous avez reçu un message sur le site de l'ASL Le Mas!!!"))
+            ->setFrom('ancienshdo@gmail.com')
+            ->setTo($mailUser)
+            ->setBody("Allez consulter votre messagerie sur le site de l'ASL Le Mas!!!");
+
+        try {
+            $mailer->send($message);
+        }
+        catch(\Exception $e) {
+
+        }
     }
 }
